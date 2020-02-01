@@ -2,6 +2,7 @@
 
 # Each_with_index
 # The simplest way to think about the issue
+# Let's try to evolve from that, shall we?
 def unique_in_order_v0(iterable)
   result = []
   iterable = iterable.chars if iterable.is_a? String
@@ -14,10 +15,15 @@ def unique_in_order_v0(iterable)
 end
 
 # Inject / Reduce
+#
 # Inject takes its object argument, and adds it to the block as an argument.
 # The block value will take the place of this object next iteration.
 # When the iteration is finished, the injected object is returned.
-# next goes directly to the next iteration like return in a method.
+#
+# respond_to? checks if the method exists for the class. We don't care that iterable is a string,
+# we care that we can use .chars on it - Now it can work on classes that inherits from String too!
+#
+# next exits a block and returns its argument as the value of the block - like return does in a method.
 def unique_in_order_v1(iterable)
   iterable = iterable.chars if iterable.respond_to?(:chars)
   iterable.inject([]) do |result, c|
@@ -50,6 +56,7 @@ end
 #   first: the result of the block on the first next element of example_var
 #   last: an array of following elements of example_var that match this result.
 # With this challenge and this block, it returns all elements that shows more than once in a row.
+#
 # &:itself is the equivalent of { |x| x }
 # &:first is the equivalent of { |x| x.first }
 def unique_in_order_v3(iterable)
