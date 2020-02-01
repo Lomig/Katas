@@ -14,7 +14,7 @@ def unique_in_order_v0(iterable)
 end
 
 # Inject / Reduce
-# Inject takes its object argument, and adds it to the block.
+# Inject takes its object argument, and adds it to the block as an argument.
 # The block value will take the place of this object next iteration.
 # When the iteration is finished, the injected object is returned.
 # next goes directly to the next iteration like return in a method.
@@ -46,8 +46,10 @@ def unique_in_order_v2(iterable)
 end
 
 # Chunk
-# It will take following elements of an array for which the block returns true.
-# With this block, it returns all elements that shows more than once in a row.
+# Applied on example_var, it will return arrays of:
+#   first: the result of the block on the first next element of example_var
+#   last: an array of following elements of example_var that match this result.
+# With this challenge and this block, it returns all elements that shows more than once in a row.
 # &:itself is the equivalent of { |x| x }
 # &:first is the equivalent of { |x| x.first }
 def unique_in_order_v3(iterable)
