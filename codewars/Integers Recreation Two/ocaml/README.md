@@ -2,7 +2,7 @@
 
 ## The issue: Very unclear Kata description
 
-* I missed the "each taken only once".
+* In my first very complex algorithm, I missed the "each taken only once".
 * That means, you can only have solutions as:
 
 ```ruby
