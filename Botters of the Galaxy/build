@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+require 'io/console'
+require 'listen'
+
+FILE_LIST = [
+  'intro.rb',
+  'constants.rb',
+  'class_point2.rb',
+  'class_unit.rb',
+  'class_entity.rb',
+  'class_item.rb',
+  'class_team.rb',
+  'class_battlefield.rb',
+  'class_extension_hero.rb',
+  'class_extension_battlefield.rb',
+  'game_initialization.rb',
+  'outro.rb'
+].freeze
+
+dir = './src/'
+
+listener = Listen.to(dir) do
+  files = FILE_LIST.map{ |s| dir + s }.join(' <(echo) ')
+  `bash -c "cat #{ files } > main.rb"`
+end
+
+listener.start
+puts 'File modifications are being watched.'
+puts '...Press a key to exit...'
+STDIN.getch
