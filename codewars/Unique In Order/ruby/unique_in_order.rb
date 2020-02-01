@@ -14,7 +14,7 @@ def unique_in_order_v0(iterable)
 end
 
 # Inject / Reduce
-# Inject takes its object argument, and adds it to the block.
+# Inject takes its object argument, and adds it to the block as an argument.
 # The block value will take the place of this object next iteration.
 # When the iteration is finished, the injected object is returned.
 # next goes directly to the next iteration like return in a method.
