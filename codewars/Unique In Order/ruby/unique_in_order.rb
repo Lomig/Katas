@@ -30,7 +30,7 @@ def unique_in_order_v1(iterable)
 end
 
 # Each_with_object
-# Very alike "inject", the only difference beinge that the object given as an
+# Very alike "inject", the only difference being that the object given as an
 # argument stays the same during the whole iteration:
 # it's not replaced by the block value.
 # The order of the block arguments is different to.
