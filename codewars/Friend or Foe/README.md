@@ -12,7 +12,7 @@ If a name has exactly 4 letters in it, you can be sure that it has to be a frien
 
 Note: keep the original order of the names in the output.
 
-## Exemples
+## Examples
 
 ```ruby
 input = ["Ryan", "Kieran", "Jason", "Yous"]
