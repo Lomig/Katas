@@ -46,8 +46,10 @@ def unique_in_order_v2(iterable)
 end
 
 # Chunk
-# It will return following elements of an array for which the block returns true.
-# With this block, it returns all elements that shows more than once in a row.
+# Applied on example_var, it will return arrays of:
+#   first: the result of the block on the first next element of example_var
+#   last: an array of following elements of example_var that match this result.
+# With this challenge and this block, it returns all elements that shows more than once in a row.
 # &:itself is the equivalent of { |x| x }
 # &:first is the equivalent of { |x| x.first }
 def unique_in_order_v3(iterable)
